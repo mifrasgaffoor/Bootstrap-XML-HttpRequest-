@@ -1,0 +1,270 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Http</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script>
+      let a = new XMLHttpRequest();
+      a.open("GET", "https://restcountries.eu/rest/v2/all", true);
+
+      a.send();
+      a.onload = () => {
+        let data = JSON.parse(a.response);
+        data.forEach((element) => {
+          if (element.name == "Afghanistan") {
+            const carddiv = document.createElement("div");
+            carddiv.classList.add("card");
+            carddiv.style.width = "18rem";
+            carddiv.style.margin = "25px";
+            carddiv.style.marginTop = "25px";
+            document.querySelector("body").appendChild(carddiv);
+
+            const nameOfCountry = document.createElement("h4");
+            nameOfCountry.classList.add("card-title");
+            nameOfCountry.innerHTML = element.name;
+            document.querySelector("div").appendChild(nameOfCountry);
+
+            const image = document.createElement("img");
+            image.classList.add("ard-img-top");
+            image.setAttribute("src", element.flag);
+            document.querySelector("div").appendChild(image);
+
+            const cardbody = document.createElement("div");
+            cardbody.classList.add("card-body");
+            document.querySelector("div").appendChild(cardbody);
+
+            const capital = document.createElement("button");
+            capital.classList.add("btn-primary");
+            capital.style.width = "40%";
+            const txtcapatital = document.createElement("h5");
+            document.querySelector("div").appendChild(txtcapatital);
+            txtcapatital.innerHTML = "Capital";
+            capital.innerHTML = element.capital;
+            document.querySelector("div").appendChild(capital);
+
+            const countryCode = document.createElement("p");
+            const countryCode2 = document.createElement("p");
+            countryCode.classList.add("card-text");
+            countryCode2.classList.add("card-text");
+            const txtcountycode = document.createElement("h5");
+            document.querySelector("div").appendChild(txtcountycode);
+            txtcountycode.innerHTML = "Country Code";
+            countryCode.innerHTML = element.alpha2Code;
+            countryCode2.innerHTML = element.alpha3Code;
+            document.querySelector("div").appendChild(countryCode);
+            document.querySelector("div").appendChild(countryCode2);
+
+            const Region = document.createElement("p");
+            Region.classList.add("card-text");
+            const txtRegion = document.createElement("h5");
+            document.querySelector("div").appendChild(txtRegion);
+            txtRegion.innerHTML = "Region";
+            Region.innerHTML = element.region;
+            document.querySelector("div").appendChild(Region);
+
+            const longs = document.createElement("p");
+            longs.classList.add("card-text");
+            const txtRlongs = document.createElement("h5");
+            document.querySelector("div").appendChild(txtRlongs);
+            txtRlongs.innerHTML = "Lat,Long";
+            longs.innerHTML = element.latlng;
+            document.querySelector("div").appendChild(longs);
+          }
+
+          if (element.name == "Åland Islands") {
+            const carddiv = document.createElement("div");
+            carddiv.classList.add("card");
+            carddiv.style.width = "18rem";
+            carddiv.style.margin = "25px";
+            document.querySelector("body").appendChild(carddiv);
+
+            const nameOfCountry = document.createElement("h4");
+            nameOfCountry.classList.add("card-title");
+            nameOfCountry.innerHTML = element.name;
+            document.querySelector("div").appendChild(nameOfCountry);
+
+            const image = document.createElement("img");
+            image.classList.add("ard-img-top");
+            image.setAttribute("src", element.flag);
+            document.querySelector("div").appendChild(image);
+
+            const cardbody = document.createElement("div");
+            cardbody.classList.add("card-body");
+            document.querySelector("div").appendChild(cardbody);
+
+            const capital = document.createElement("button");
+            capital.classList.add("btn-primary");
+            capital.style.width = "40%";
+            const txtcapatital = document.createElement("h5");
+            document.querySelector("div").appendChild(txtcapatital);
+            txtcapatital.innerHTML = "Capital";
+            capital.innerHTML = element.capital;
+            document.querySelector("div").appendChild(capital);
+
+            const countryCode = document.createElement("p");
+            const countryCode2 = document.createElement("p");
+            countryCode.classList.add("card-text");
+            countryCode2.classList.add("card-text");
+            const txtcountycode = document.createElement("h5");
+            document.querySelector("div").appendChild(txtcountycode);
+            txtcountycode.innerHTML = "Country Code";
+            countryCode.innerHTML = element.alpha2Code;
+            countryCode2.innerHTML = element.alpha3Code;
+            document.querySelector("div").appendChild(countryCode);
+            document.querySelector("div").appendChild(countryCode2);
+
+            const Region = document.createElement("p");
+            Region.classList.add("card-text");
+            const txtRegion = document.createElement("h5");
+            document.querySelector("div").appendChild(txtRegion);
+            txtRegion.innerHTML = "Region";
+            Region.innerHTML = element.region;
+            document.querySelector("div").appendChild(Region);
+
+            const longs = document.createElement("p");
+            longs.classList.add("card-text");
+            const txtRlongs = document.createElement("h5");
+            document.querySelector("div").appendChild(txtRlongs);
+            txtRlongs.innerHTML = "Lat,Long";
+            longs.innerHTML = element.latlng;
+            document.querySelector("div").appendChild(longs);
+          }
+
+          if (element.name == "Albania") {
+            const carddiv = document.createElement("div");
+            carddiv.classList.add("card");
+            carddiv.style.width = "18rem";
+            carddiv.style.margin = "25px";
+            document.querySelector("body").appendChild(carddiv);
+
+            const nameOfCountry = document.createElement("h4");
+            nameOfCountry.classList.add("card-title");
+            nameOfCountry.innerHTML = element.name;
+            document.querySelector("div").appendChild(nameOfCountry);
+
+            const image = document.createElement("img");
+            image.classList.add("ard-img-top");
+            image.setAttribute("src", element.flag);
+            document.querySelector("div").appendChild(image);
+
+            const cardbody = document.createElement("div");
+            cardbody.classList.add("card-body");
+            document.querySelector("div").appendChild(cardbody);
+
+            const capital = document.createElement("button");
+            capital.classList.add("btn-primary");
+            capital.style.width = "40%";
+            const txtcapatital = document.createElement("h5");
+            document.querySelector("div").appendChild(txtcapatital);
+            txtcapatital.innerHTML = "Capital";
+            capital.innerHTML = element.capital;
+            document.querySelector("div").appendChild(capital);
+
+            const countryCode = document.createElement("p");
+            const countryCode2 = document.createElement("p");
+            countryCode.classList.add("card-text");
+            countryCode2.classList.add("card-text");
+            const txtcountycode = document.createElement("h5");
+            document.querySelector("div").appendChild(txtcountycode);
+            txtcountycode.innerHTML = "Country Code";
+            countryCode.innerHTML = element.alpha2Code;
+            countryCode2.innerHTML = element.alpha3Code;
+            document.querySelector("div").appendChild(countryCode);
+            document.querySelector("div").appendChild(countryCode2);
+
+            const Region = document.createElement("p");
+            Region.classList.add("card-text");
+            const txtRegion = document.createElement("h5");
+            document.querySelector("div").appendChild(txtRegion);
+            txtRegion.innerHTML = "Region";
+            Region.innerHTML = element.region;
+            document.querySelector("div").appendChild(Region);
+
+            const longs = document.createElement("p");
+            longs.classList.add("card-text");
+            const txtRlongs = document.createElement("h5");
+            document.querySelector("div").appendChild(txtRlongs);
+            txtRlongs.innerHTML = "Lat,Long";
+            longs.innerHTML = element.latlng;
+            document.querySelector("div").appendChild(longs);
+          }
+
+          if (element.name == "Algeria") {
+            const carddiv = document.createElement("div");
+            carddiv.classList.add("card");
+            carddiv.style.width = "18rem";
+            carddiv.style.margin = "25px";
+            document.querySelector("body").appendChild(carddiv);
+
+            const nameOfCountry = document.createElement("h4");
+            nameOfCountry.classList.add("card-title");
+            nameOfCountry.innerHTML = element.name;
+            document.querySelector("div").appendChild(nameOfCountry);
+
+            const image = document.createElement("img");
+            image.classList.add("ard-img-top");
+            image.setAttribute("src", element.flag);
+            document.querySelector("div").appendChild(image);
+
+            const cardbody = document.createElement("div");
+            cardbody.classList.add("card-body");
+            document.querySelector("div").appendChild(cardbody);
+
+            const capital = document.createElement("button");
+            capital.classList.add("btn-primary");
+            capital.style.width = "40%";
+            const txtcapatital = document.createElement("h5");
+            document.querySelector("div").appendChild(txtcapatital);
+            txtcapatital.innerHTML = "Capital";
+            capital.innerHTML = element.capital;
+            document.querySelector("div").appendChild(capital);
+
+            const countryCode = document.createElement("p");
+            const countryCode2 = document.createElement("p");
+            countryCode.classList.add("card-text");
+            countryCode2.classList.add("card-text");
+            const txtcountycode = document.createElement("h5");
+            document.querySelector("div").appendChild(txtcountycode);
+            txtcountycode.innerHTML = "Country Code";
+            countryCode.innerHTML = element.alpha2Code;
+            countryCode2.innerHTML = element.alpha3Code;
+            document.querySelector("div").appendChild(countryCode);
+            document.querySelector("div").appendChild(countryCode2);
+
+            const Region = document.createElement("p");
+            Region.classList.add("card-text");
+            const txtRegion = document.createElement("h5");
+            document.querySelector("div").appendChild(txtRegion);
+            txtRegion.innerHTML = "Region";
+            Region.innerHTML = element.region;
+            document.querySelector("div").appendChild(Region);
+
+            const longs = document.createElement("p");
+            longs.classList.add("card-text");
+            const txtRlongs = document.createElement("h5");
+            document.querySelector("div").appendChild(txtRlongs);
+            txtRlongs.innerHTML = "Lat,Long";
+            longs.innerHTML = element.latlng;
+            document.querySelector("div").appendChild(longs);
+          }
+        });
+      };
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
